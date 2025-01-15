@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 
 export default function Users() {
@@ -18,6 +19,13 @@ export default function Users() {
 
     return (
         <>
+        <div className="container">
+        <h1> Create Users</h1>
+        <Link className="btn btn-primary" to={'/Create'}>Create User</Link>
+ 
+
+        </div>
+            
             <div className="container-fluid d-flex vh-100 justify-content-center align-items-center">
                 <div className="row">
                     {users.map((user) => (
