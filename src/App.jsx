@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom'
 import NotFound from './compenents/Notfound/NotFound'
 import Users from './compenents/Users/Users'
 import Create from './compenents/Users/Create'
+import Details from './compenents/Users/Details'
 
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/users" element={<Users />} />
       <Route path="/create" element={<Create />} />
+      <Route path="/users/:id" element={<Details />} />
 
       <Route path="*" element={<NotFound />} />
     </Routes>

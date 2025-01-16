@@ -62,7 +62,8 @@ export default function Users() {
                                     
                                     {user.phone}</div>
                                 <div className=" gap-2 d-flex justify-content-between">
-                                <button className="btn btn-primary">Primary </button>
+
+                                <Link to={`/users/${user._id}`} className="btn btn-primary">Details</Link>
 
 
                                 <button onClick={()=> deleteUser(user._id)} type="button" class="btn btn-danger">Delete</button>
