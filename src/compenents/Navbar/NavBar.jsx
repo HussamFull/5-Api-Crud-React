@@ -34,8 +34,8 @@ export default function NavBar() {
         </li>
       
         <li className="nav-item">
-          <Link className="nav-link" to={"/"}>
-            Create Product
+          <Link className="nav-link" to={"/Create"}>
+            Create User
           </Link>
         </li>
         <li className="nav-item">

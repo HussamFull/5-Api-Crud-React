@@ -15,7 +15,14 @@ export default function Users() {
     }
     useEffect(() => {
         getUsers();
-    }, [])
+    }, [users])
+
+
+    const deleteUser = async (id) => {
+        await axios.delete(`${import.meta.env.VITE_BURL}/users/${id}`);
+        alert('User Deleted successfully')
+        //getUsers();
+    }
 
     return (
         <>
@@ -24,22 +31,43 @@ export default function Users() {
         <Link className="btn btn-primary" to={'/Create'}>Create User</Link>
  
 
-        </div>
-            
-            <div className="container-fluid d-flex vh-100 justify-content-center align-items-center">
-                <div className="row">
+            <div className="  m-5 container-fluid d-flex  justify-content-center align-items-center">
+                <div className="row ">
                     {users.map((user) => (
-                        <div key={user.id} className="col-md-4" style={{ width: "18rem" }}>
+                        <div  key={user.id} className="col-md-3 mb-4" style={{ width: "18rem" }}>
                             <div className="card-container">
                                 <div className="circle-background">
                                     <div className="square-icon">
                                         <span className="icon-text">JS</span>
                                     </div>
                                 </div>
-                                <div className="title"> <span className="lessons-count" >Name:        </span> {user.userName}</div>
-                                <div className="description"> <span className="lessons-count" >Email :</span> {user.email}</div>
-                                <div className="description"> <span className="lessons-count" >phone :</span> {user.phone}</div>
-                                <button className="view-lessons-button">عرض الدروس</button>
+                                <div className="title"> <span className="lessons-count" >
+                                <span class="badge bg-info text-dark"> Name:</span>
+                                           </span> {user.userName}
+                                    
+                                    </div>
+                                <div className="description"> <span className="lessons-count" >
+                                <span class="badge bg-info text-dark">Email:</span>
+
+                                    
+                                    
+                                    </span> {user.email}</div>
+                                
+                                <div className="description"> <span className="lessons-count" >
+                                <span class="badge bg-info text-dark">  phone :</span>
+                                   
+                                    
+                                    
+                                    </span> 
+                                    
+                                    {user.phone}</div>
+                                <div className=" gap-2 d-flex justify-content-between">
+                                <button className="btn btn-primary">Primary </button>
+
+
+                                <button onClick={()=> deleteUser(user._id)} type="button" class="btn btn-danger">Delete</button>
+                                </div>
+
                             </div>
                         </div>
 
@@ -47,6 +75,7 @@ export default function Users() {
 
                 </div>
 
+            </div>
             </div>
         </>
     )
