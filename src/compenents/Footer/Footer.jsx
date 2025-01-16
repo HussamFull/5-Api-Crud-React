@@ -7,7 +7,7 @@ export default function Footer() {
       <div>
  
   <div className="copyright py-4 text-center text-white">
-    <div className="container"><small>Copyright © <a href='https://hussamfull.github.io/iPortfolio2/'>Hussam Alnabelsi 2024 </a>  </small></div>
+    <div className="container"><small>Copyright © <a href='https://hussamfull.github.io/iPortfolio2/'>Hussam Alnabelsi 2025 </a>  </small></div>
   </div>
 </div>
 

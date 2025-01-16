@@ -7,7 +7,8 @@ export default function Home() {
       <header className="text-center">
         <div className="header__container">
           <h1 className="header__title">Home </h1>
-          <p className="header__subtitle">Home</p>
+          <p className="header__subtitle">Api CRUD System
+          </p>
         </div>
       </header>
     </div>
